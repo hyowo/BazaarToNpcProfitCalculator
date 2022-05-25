@@ -34,6 +34,7 @@
                     <th scope="col">Buy Price</th>
                     <th scope="col">Sell Price</th>
                     <th scope="col">Profit</th>
+                    <th scope="col">Profit Margin</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,6 +44,7 @@
                     <td><%= item.buyPrice %></td>
                     <td><%= item.sellPrice %></td>
                     <td><%= item.profit %></td>
+                    <td><%= 100/item.sellPrice*item.profit %></td>
                 </tr>
                 <% } %>
             </tbody>
