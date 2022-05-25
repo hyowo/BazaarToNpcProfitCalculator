@@ -13,7 +13,7 @@ function get(req, res) {
                     if (buyPrice) {
                         var sellPrice = npcSellPrices[instantBuyPrice.productId].sellprice;
                         if (sellPrice - buyPrice > 0) {
-                            profitableItems.push({"fullname": npcSellPrices[instantBuyPrice.productId].fullname, "buyPrice": buyPrice, "sellPrice": sellPrice, "profit": Math.round((sellPrice - buyPrice)*100)/100});
+                            profitableItems.push({"fullname": npcSellPrices[instantBuyPrice.productId].fullname, "buyPrice": buyPrice, "sellPrice": sellPrice, "profit": Math.round((sellPrice - buyPrice)*100)/100, "profitMargin": Math.round(100/sellPrice*Math.round((sellPrice - buyPrice)*100)/100)});
                         }
                     }
                 }
