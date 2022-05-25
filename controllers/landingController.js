@@ -19,7 +19,7 @@ function get(req, res) {
                 }
             });
             var sortedProfitableItems = profitableItems.sort(function (a, b) {
-                return b.profit - a.profit;
+                return b.profitMargin - a.profitMargin;
             });
             var FilterProfitableProducts = function (profitableItems) {
                 var filteredProfitableItems = [];
